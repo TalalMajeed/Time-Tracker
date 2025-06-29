@@ -9,6 +9,7 @@
 /Desktop-Tracker/*.pid
 /Desktop-Tracker/*.seed
 /Desktop-Tracker/*.pid.lock
+/Desktop-Tracker/*.erb
 /Desktop-Tracker/lib-cov
 /Desktop-Tracker/coverage
 /Desktop-Tracker/*.lcov
@@ -50,6 +51,9 @@
 /Desktop-Tracker/.yarn/build-state.yml
 /Desktop-Tracker/.yarn/install-state.gz
 /Desktop-Tracker/.pnp.*
+/Desktop-Tracker/release/app/dist
+/Desktop-Tracker/release/build
+/Desktop-Tracker/.erb/dll
 /Frontend-Web/logs
 /Frontend-Web/*.log
 /Frontend-Web/npm-debug.log*
@@ -102,7 +106,6 @@
 /Frontend-Web/.yarn/build-state.yml
 /Frontend-Web/.yarn/install-state.gz
 /Frontend-Web/.pnp.*
-
 /Primary-API/logs
 /Primary-API/*.log
 /Primary-API/npm-debug.log*
@@ -155,3 +158,4 @@
 /Primary-API/.yarn/build-state.yml
 /Primary-API/.yarn/install-state.gz
 /Primary-API/.pnp.*
+.DS_Store
