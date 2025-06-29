@@ -1,0 +1,68 @@
+{
+    "name": "desktop-tracker",
+    "version": "1.0.0",
+    "description": "A desktop time tracking application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "dev": "concurrently \"npm run dev:react\" \"wait-on http://localhost:3000 && electron .\"",
+        "dev:react": "react-scripts start",
+        "build": "react-scripts build",
+        "build:electron": "electron-builder",
+        "dist": "npm run build && electron-builder --publish=never",
+        "eject": "react-scripts eject"
+    },
+    "keywords": [
+        "electron",
+        "react",
+        "time-tracker",
+        "desktop"
+    ],
+    "author": "TalalMajeed",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1"
+    },
+    "devDependencies": {
+        "electron": "^28.0.0",
+        "electron-builder": "^24.6.4",
+        "electron-is-dev": "^2.0.0",
+        "concurrently": "^8.2.2",
+        "wait-on": "^7.2.0"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "build": {
+        "appId": "com.yourcompany.desktop-tracker",
+        "productName": "Desktop Tracker",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "main.js",
+            "build/**/*",
+            "node_modules/**/*"
+        ],
+        "mac": {
+            "category": "public.app-category.productivity"
+        },
+        "win": {
+            "target": "nsis"
+        },
+        "linux": {
+            "target": "AppImage"
+        }
+    }
+}
