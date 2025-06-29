@@ -10,51 +10,50 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #1a1a1a;
-    color: #ffffff;
+    background: #ffffff;
+    color: #333333;
     overflow: hidden;
 }
 
 .app {
     width: 300px;
     height: 600px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: #ffffff;
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    gap: 16px;
+    padding: 20px;
+    gap: 20px;
     overflow-y: auto;
+    border: 1px solid #e5e7eb;
 }
 
 .header {
     text-align: center;
-    padding: 16px 0;
-    border-bottom: 1px solid #333;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .header h1 {
     font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1f2937;
+    letter-spacing: -0.025em;
 }
 
 .timer {
-    background: rgba(255, 255, 255, 0.05);
+    background: #f9fafb;
     border-radius: 12px;
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border: 1px solid #e5e7eb;
 }
 
 .time-display {
     font-size: 32px;
     font-weight: 700;
-    font-family: "Courier New", monospace;
-    color: #00ff88;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+    color: #059669;
+    letter-spacing: -0.025em;
 }
 
 .controls {
@@ -64,66 +63,62 @@ body {
 }
 
 .control-btn {
-    padding: 12px 32px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 25px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    text-transform: none;
+    letter-spacing: 0;
+    width: 100%;
 }
 
 .control-btn.start {
-    background: linear-gradient(45deg, #00ff88, #00cc6a);
-    color: #000;
-    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+    background: #059669;
+    color: #ffffff;
 }
 
 .control-btn.start:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+    background: #047857;
 }
 
 .control-btn.stop {
-    background: linear-gradient(45deg, #ff4757, #ff3742);
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+    background: #dc2626;
+    color: #ffffff;
 }
 
 .control-btn.stop:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+    background: #b91c1c;
 }
 
 .info-section {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .info-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: #f9fafb;
     border-radius: 12px;
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    padding: 20px;
+    border: 1px solid #e5e7eb;
 }
 
 .info-card h3 {
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    color: #374151;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .info-card p {
     font-size: 14px;
-    color: #fff;
-    font-family: "Courier New", monospace;
+    color: #1f2937;
+    font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
 }
 
 .process-list {
@@ -136,15 +131,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.03);
+    padding: 10px 12px;
+    background: #ffffff;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid #e5e7eb;
 }
 
 .process-name {
     font-size: 12px;
-    color: #fff;
+    color: #1f2937;
     font-weight: 500;
     max-width: 150px;
     overflow: hidden;
@@ -154,13 +149,13 @@ body {
 
 .process-memory {
     font-size: 10px;
-    color: #888;
-    font-family: "Courier New", monospace;
+    color: #6b7280;
+    font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
 }
 
 .no-data {
     font-size: 12px;
-    color: #666;
+    color: #9ca3af;
     text-align: center;
     font-style: italic;
 }
@@ -174,106 +169,91 @@ body {
 .sessions-section h3 {
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 12px;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    color: #374151;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .sessions-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     overflow-y: auto;
 }
 
 .session-item {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
 }
 
 .session-item:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateX(2px);
+    background: #f3f4f6;
+    border-color: #d1d5db;
 }
 
 .session-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .session-duration {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
-    color: #00ff88;
-    font-family: "Courier New", monospace;
+    color: #059669;
+    font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
 }
 
 .session-time {
-    font-size: 10px;
-    color: #888;
+    font-size: 12px;
+    color: #6b7280;
 }
 
 .session-processes {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 6px;
 }
 
 .process-tag {
-    background: rgba(102, 126, 234, 0.2);
-    color: #667eea;
-    padding: 2px 6px;
-    border-radius: 4px;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 4px 8px;
+    border-radius: 6px;
     font-size: 10px;
-    border: 1px solid rgba(102, 126, 234, 0.3);
+    border: 1px solid #a7f3d0;
+    font-weight: 500;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 2px;
+    background: #f3f4f6;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 2px;
+    background: #d1d5db;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-/* Animation for timer */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.timer {
-    animation: pulse 2s infinite;
+    background: #9ca3af;
 }
 
 /* Responsive adjustments */
 @media (max-width: 300px) {
     .app {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
+        border: none;
     }
 }

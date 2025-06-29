@@ -105,21 +105,21 @@ function App() {
                     className={`control-btn ${isTracking ? "stop" : "start"}`}
                     onClick={isTracking ? handleStop : handleStart}
                 >
-                    {isTracking ? "⏹ Stop" : "▶ Start"}
+                    {isTracking ? "Stop Tracking" : "Start Tracking"}
                 </button>
             </div>
 
             {isTracking && (
                 <div className="info-section">
                     <div className="info-card">
-                        <h3>🖱️ Cursor Position</h3>
+                        <h3>Cursor Position</h3>
                         <p>
                             X: {cursorPosition.x}, Y: {cursorPosition.y}
                         </p>
                     </div>
 
                     <div className="info-card">
-                        <h3>💻 Running Apps (Top 3)</h3>
+                        <h3>Running Applications</h3>
                         <div className="process-list">
                             {processes.length > 0 ? (
                                 processes.map((process, index) => (
@@ -144,7 +144,7 @@ function App() {
             )}
 
             <div className="sessions-section">
-                <h3>📊 Recent Sessions</h3>
+                <h3>Recent Sessions</h3>
                 <div className="sessions-list">
                     {sessions.length > 0 ? (
                         sessions.map((session) => (
